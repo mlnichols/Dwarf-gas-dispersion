@@ -58,7 +58,7 @@ inds *= Dens_gal > 1e-2 #Only consider the areas stars can actually form in the 
 
 #This could now be outputted
 deviation = weight_std(MgFe_prop[inds],weights=Dens_gal[inds])
-print 'Deviation of [Mg/Fe] at the metallicity plateau is ',deviation,' this should be <0.1 or it doesn\'t match observations!'
+print 'Deviation of [Mg/Fe] at the metallicity plateau is %6.4f this should be <0.1 or it doesn\'t match observations!' % deviation
 #Alternatively plot it
 plt.scatter(Fe_prop[inds],MgFe_prop[inds],c=Dens_gal[inds],alpha=0.3)
 plt.show()
